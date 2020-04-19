@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Tourism</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body background="images/ban.jpg">
+    
+   <header>
+   
+       <img src="images/logo.jpg" alt="logo" style="width: 100px;height: 100px; float: left">
+       <h1>Kerala Tourism</h1>
+    <div class="head-tag">
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+       <a href="signin.html">Sign in</a>
+      
+      
+    </div>
+   </header>
+   <h2>"God's Own Country"</h2>
+   <p><b>Kerala, India</b></p> 
+    <p><b>Famously known as 'God's Own Country', Kerala is a state located on the Malabar coast of Southern India.</b></p>
+    <p><b>Home to a vast network of brackish lagoons called backwaters, ayurvedic massages,</b></p>
+    <p><b>wildlife sanctuaries, sprawling tea gardens, hill-stations,</b></p>
+    <p><b>palm tree-lined beaches and colourful dance forms,</b></p>
+    <p><b>Kerala has everything on offer to take your pick from!</b></p>  
+
+    <div class="container">
+        <form onsubmit= "return validEmailId() && passWord()" action="districts.html" style="border:1px solid #CCC" >
+    
+               <h1>Sign In</h1>
+               
+               <hr>
+               <label for="username"><b>Username</b></label>
+               <input type="text" placeholder="Email Id" id="username" required>
+    
+               
+    
+               
+               <label for="password"><b>Enter Password</b></label>
+               <input type = "password" id="pass" placeholder="Password" required maxlength="15" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+               
+              
+                    
+    
+               <div class="clearfix">
+                <button type="button" class="cancelbtn">Forget Password</button>
+                <button type="submit" class="signupbtn">Submit</button>
+              </div>
+    <lable for="error" id="error"></lable>
+    <lable for="error1" id="error1"></lable>
+   
+          </form>
+         </div>
+    
+       </div>
+       </section>
+       <script src="signin.js"></script>
+       
+    
+     </body>
+     <footer>
+        <p>Copyright &copy; Kerala Tourism 2020</p>
+     </footer>
+    </html>

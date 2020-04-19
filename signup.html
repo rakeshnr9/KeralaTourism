@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Tourism</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body background="images/panorama.jpg">
+
+   <header>
+
+       <img src="images/logo.jpg" alt="logo" style="width: 100px;height: 100px; float: left">
+       <h1>Kerala Tourism</h1>
+    <div class="head-tag">
+        <a href="index.html">Home</a>
+       <a href="signup.html">Sign Up</a>
+       <a href="signin.html">Sign in</a>
+
+
+    </div>
+   </header>
+   <h2>"God's Own Country"</h2>
+   <p><b>Kerala, India</b></p>
+    <p><b>Famously known as 'God's Own Country', Kerala is a state located on the Malabar coast of Southern India.</b></p>
+    <p><b>Home to a vast network of brackish lagoons called backwaters, ayurvedic massages,</b></p>
+    <p><b>wildlife sanctuaries, sprawling tea gardens, hill-stations,</b></p>
+    <p><b>palm tree-lined beaches and colourful dance forms,</b></p>
+    <p><b>Kerala has everything on offer to take your pick from!</b></p>
+
+    <div class="container">
+    <form onsubmit= "return validEmailId() && phoneNumber() && pswMatch()" action="signin.html" style="border:1px solid #CCC" >
+
+           <h1>Sign Up</h1>
+           <p>Please fill in this form to create an account.</p>
+           <hr>
+           <label for="name"><b>Name</b></label>
+           <input type="text" placeholder="Name" id="name" required>
+
+           <label for="phone"><b>Phone</b></label>
+           <input type="text" placeholder="Phone" id="phone" required maxlength="10">
+
+           <label for="email"><b>Email</b></label>
+           <input type="text" placeholder="Enter Email" id="email" required>
+           <label for="password"><b>Enter Password</b></label>
+           <input type = "password" id="pass" placeholder="Password" required maxlength="15" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+           <p5 style="color:white"> Minimum 8 characters, at least one uppercase and one lower case, must contain at least one number</p5>
+           <br><br>
+               <p5 class="head">Password Strength</p5>
+               <p5 class="strength" id="length"></p5>
+
+           <input type = "password" id="pass2" placeholder="Re-Enter Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+           
+           <label for="errorpass" id="errorpass"></label>
+                
+
+           <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+<lable for="error" id="error"></lable>
+<lable for="error1" id="error1"></lable>
+<label for="errorpass" id="errorpass"></label>
+      </form>
+     </div>
+
+   </div>
+   </section>
+   <script src="index.js"></script>
+   <script>
+      pass.addEventListener('keyup',function()
+
+      {
+          strength();
+      })
+      function strength()
+      {
+          var val= document.getElementById("pass").value;
+          var status= document.getElementById("length");
+          var counter = 0;
+          if( val!="")
+          {
+              if (val.length<= 5)
+              counter=1;
+              if (val.length>5 && val.length<=10)
+              counter=2;
+              if (val.length>10 && val.length<=15)
+              counter=3;
+              if (counter == 1)
+              {
+                  status.innerHTML="POOR";
+                  status.style.background = "#FF0000";
+                  status.style.color="    #FFFFFF";
+              }
+              if (counter == 2)
+              {
+                  status.innerHTML="MEDIUM";
+                  status.style.background = " #FFA500";
+                  status.style.color="    #FFFFFF";
+              }
+              if (counter == 3)
+              {
+                  status.innerHTML="STRONG";
+                  status.style.background = "#008000";
+                  status.style.color="    #FFFFFF";
+              }
+          }
+      }
+  </script>
+
+ </body>
+ <footer>
+    <p>Copyright &copy; Kerala Tourism 2020</p>
+ </footer>
+</html>
